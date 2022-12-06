@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("image/cropui-bw.jpg");
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.page {
+	display: none;
+	min-height: 100vh;
+	margin-bottom: 100px;
+}
+
+.page.active-page {
+	display: block;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+nav {
+    padding: 20px;
+    position: sticky;
+    top: 0;
+ }
+
+header {
+    display: flex;
+    height: 7vh;
+    background-color: black;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0px 7px 5px lightgray;
+ }
+
+.headtitle {
+    font-family: Palatino, URW Palladio L, serif;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.img1 {
+    width: 35px;
+    max-height: 35px;
+    object-fit: cover;
+    object-position: center;
+ }
+
+ .maintitle {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.maintitle a{
+    font-family: 'Playfair Display SC', serif;
+}
+
+
+.main-column {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    /* properti lainnya */
+    width: 750px;
+    height: 680px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #F7F9FC;
+    align-items: center;
+    box-shadow: 4px 4px 5px 5px #666666;
+}
+
+.main-column a {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+input#file-input {
+    display: none;
+}
+
+input#file-input + label {
+    background-color: black;
+    color: #fff;
+    border-radius: 9px;
+    margin-left: 20px
+}
+
+input#file-input + label:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+label {
+    color: white;
+    height: 40px;
+    width: 270px;
+    background-color: black;
+    margin: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input#submit-btn {
+    color: white;
+    height: 40px;
+    width: 270px;
+    background-color: black;
+    margin: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.text-prediction {
+    position: absolute;
+    opacity: 0.2;
+    margin-top: 370px;
+}
+.text-prediction a {
+    
+    font-size: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.second-column {
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    /* properti lainnya */
+    width: 750px;
+    height: 920px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #F7F9FC;
+    align-items: center;
+    box-shadow: 4px 4px 5px 5px #666666;
+}
+
+h1.lnkinoRPBy {
+	font-weight: 900;
+	text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    margin-bottom: 20px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+.info-column p {
+    font-weight: 500px;
+	text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+.container-div {
+    flex-grow: 1;
+    width: 270px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.container-div p, ul {
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.container-div img {
+    width: 120px;
+    height: 140px;
+    border-radius: 50%;
+ }
+
+.nama-profile {
+    font-size: 18px;
+}
+
+.fa {
+    cursor: pointer;
+}
+
+.credit-two {
+    text-align: center;
+}
+
+.credit-p {
+    color: black;
+    text-decoration: none;
+}
+
+.credit-p:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    height: 7vh;
+    background-color: black;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0px 7px 5px lightgray;
+}
+
+footer a {
+    font-family: Palatino, URW Palladio L, serif;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+   #content,
+   .main-column, .second-column {
+       width: 100%;
+       padding: 0;
+   }
+}

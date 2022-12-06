@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prediction of Organic or Non-Organic Waste</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+<body>
+
+    <div class="page active-page" id="home">
+        <header>
+            <nav>
+                <a class="headtitle"><img src="static/image/recycling-bin2.png" class="img1">Waste Type Prediction</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="maintitle" id="content">
+                <a>Prediction of Organic or<br> Inorganic Waste Type</a>
+            </div>
+            <br>
+            <div class="main-column">
+                <a>Add Image</a><br>
+                <form class="p-3 text-center" action='/submit', method="post" enctype="multipart/form-data">
+                    <input class="form-control" type="file" name="imagefile" id="file-input">
+                        <label for="file-input">
+                            <span class="material-icons-outlined">
+                                add_photo_alternate
+                            </span> &nbsp;Choose a File...
+                        </label>
+                        <span class="file-input">
+                            <strong>Choose a File:</strong>
+                            <span id="file-name">None</span>
+                        </span>
+                    <input class="btn btn-primary mt-3" type="submit" id="submit-btn" value="Predict image">
+                </form>
+
+                <div class="text-prediction">
+                    <a>>Prediction Here<</a>
+                </div>
+
+                {% if prediction %}
+                    <img src="{{image}}" class="rounded mx-auto d-block" height="300px" width="300px" border="10px solid" alt="Gambar Jenis Sampah"><br>
+                    <p class="text-center"> The Result of the Typed Image Prediction Is <b>{{prediction}}</b></p>
+                {% endif %}
+
+            </div>
+
+            <div class="second-column">
+                <div class="info-column">
+                    <h1 class="lnkinoRPBy">Information</h1>
+                    <hr>
+                    <p>Classifying the types of Organic and Inorganic waste through images using the Machine Learning Image Classification technique. This Web Application was created to sort out the types of waste in order to reduce waste activity.</p>
+                </div>
+                <br>
+                
+                <div class="bio-column">
+                    <h1 class="lnkinoRPBy">Developers Team</h1>
+                    <hr>
+                    <div class="flex-container">
+                        <div class="container-div">
+                            <figure>
+                                <img src="static/image/jody.png">
+                            </figure>
+                            <p><a class="nama-profile"><b>Jody Irawan</b></a</p>
+                            <p>&ensp;</p>
+                            <p>student in Indonesian Computer University, Majoring in Information Systems</p>
+                            <p>&ensp;</p>
+                            <p>&bull; &ensp; Machine Learning & Front-End Web Developer M2 Group CSD-065</p>
+                            <a href="https://github.com/jodyirawan" target="_blank"><button style="font-size:24px"><i class="fa fa-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/jody-irawan-656aa520b" target="_blank"><button style="font-size:24px"><i class="fa fa-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/jodyirawaan/" target="_blank"><button style="font-size:24px"><i class="fa fa-instagram"></i></button></a>
+                        </div>
+                        <div class="container-div">
+                            <figure>
+                                <img src="static/image/rahmat.png">
+                            </figure>
+                            <p><a class="nama-profile"><b>Rahmat Syarif Azhari</b></a></p>
+                            <p>&ensp;</p>
+                            <p>student in Indonesian Education of University, Majoring in Computer Science</p>
+                            <p>&ensp;</p>
+                            <p>&bull; &ensp; Machine Learning & Front-End Web Developer M2 Group CSD-065</p>
+                            <a href="https://github.com/zack-rahmat" target="_blank"><button style="font-size:24px"><i class="fa fa-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/zackrahmat" target="_blank"><button style="font-size:24px"><i class="fa fa-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/zack_rahmat/" target="_blank"><button style="font-size:24px"><i class="fa fa-instagram"></i></button></a>
+                        </div>
+                    </div>
+                <br>    
+                </div>
+
+                <div class="credit-column"></div>
+                    <h1 class="lnkinoRPBy">Credits</h1>
+                    <hr>
+                    <div class="credit-two">
+                        <p>Datasets -- <a href="https://www.kaggle.com/techsash/waste-classification-data" class="credit-p" target="_blank"><b>Waste Classification Data</b></a></p>
+                        <p>CSS Framework -- <a href="https://developers.google.com/fonts/docs/material_icons" class="credit-p" target="_blank"><b>Google Font & Icont</b></a></p>
+                        <p>Library -- <b><a href="https://www.tensorflow.org/" class="credit-p" target="_blank">Tensorflow,</a><a href="https://numpy.org/" class="credit-p" target="_blank"> Numpy,</a><a href=" https://keras.io/" class="credit-p" > Keras</a> and <a href="https://matplotlib.org/" class="credit-p">Matplotlib</a></b></p>
+                        <p>Deployment -- <a href="https://flask.palletsprojects.com/en/2.0.x/" class="credit-p" target="_blank"><b>Flask</b></a></p>
+                        <p>Hosting -- <b><a href="https://www.heroku.com" class="credit-p" target="_blank">Heroku</a></b></p>  
+                    </div>          
+                </div>
+            </div>
+            
+
+        </main>
+    </div>	
+    
+    <footer>
+        <a>Prediction of Organic or Non-Organic Waste &#169; 2021, CSD-065</a>
+    </footer>
+    <script src="https://easydoc.vinsdev.xyz/libs/cdn/v1/index.js" defer></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
