@@ -1,5 +1,3 @@
-# WastePredict-Capstone
-
 <h1 align=center>Waste Type Prediction | <a href="https://waste-prediction-image.herokuapp.com//">Demo App</a></h1>
 
 ### Aplikasi Website Prediksi Jenis Sampah Organik / Non Organik
